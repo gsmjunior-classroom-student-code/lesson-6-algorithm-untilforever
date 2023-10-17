@@ -26,6 +26,16 @@ selection_sort()
 - 다음 인덱스 (1부터 끝까지) 범위 내에서 최솟값을 찾는다.
 - 처음 위치에 최솟값을 넣는다. (이하 동일)
 - ...
+```js
+let arr = [3,1,5,6,2,4];
+arr.forEach((v,i) => {
+  const min = Math.min(...[...arr].slice(i, arr.length));
+  const temp = arr[i];
+  arr[arr.indexOf(min)] = temp;
+  arr[i] = min;
+})
+console.log(arr) // -> [1,2,3,4,5,6]
+```
 
 ## 버블 정렬
 bubble_sort()
