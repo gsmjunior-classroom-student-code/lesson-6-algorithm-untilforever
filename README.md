@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/kmWXipzR)
 # Lesson 6: 알고리즘
 
-- [ ] 정렬(sort), 팀 과제
+- [x] 정렬(sort), 팀 과제
 
 정렬을 사용하여 O(N)에 1부터 N까지의 값을 포함하는 배열 정렬
 ```
@@ -41,3 +41,20 @@ console.log(arr) // -> [1,2,3,4,5,6]
 bubble_sort()
 - 인접한 두 값을 비교하여 정렬하는 방법.
 - 비교적 구현이 쉬움.
+```js
+let arr = [3,1,5,6,2,4];
+let n = array.length;
+let swapped;
+do {
+    swapped = false;
+    for (let i = 0; i < n - 1; i++) {
+        if (array[i] > array[i + 1]) {
+            let temp = array[i];
+            array[i] = array[i + 1];
+            array[i + 1] = temp;
+            swapped = true;
+        }
+    }
+} while (swapped);
+console.log(arr) // -> [1,2,3,4,5,6]
+```
